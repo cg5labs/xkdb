@@ -17,20 +17,17 @@ args = parser.parse_args()
 api_token = os.environ['API_TOKEN']
 
 # the source file
-local_filename = pathlib.Path(args.file)    # located in this folder
-if local_filename.exists():
-  filepath = local_filename  # path object, defining the file
+local_filename = pathlib.Path(args.file)
 
 # target location in Dropbox
 target = "/"              # the target folder
-#targetfile = target + target_filename + ".txt"   # the target path and file name
 targetfile = target + target_filename  # the target path and file name
 
 # Create a dropbox object using an API v2 key
 d = dropbox.Dropbox(api_token)
 
 # open the file and upload it
-with filepath.open("rb") as f:
+with local_filename.open("rb") as f:
    # upload gives you metadata about the file
    # we want to overwite any previous version of the file
    meta = d.files_upload(f.read(), targetfile, mode=dropbox.files.WriteMode("overwrite"))
