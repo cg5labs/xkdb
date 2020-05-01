@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
-UPLOAD=$1
-RC=0
+# start custom
 APP_PATH=/Users/User/coding_local/python/xkdb
 CFG_PATH="${HOME}"
+# end custom
+
+UPLOAD=$1
+RC=0
 
 cd ${APP_PATH} || exit 1
 
