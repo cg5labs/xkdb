@@ -20,7 +20,7 @@ if [[ $RC == 0 ]]; then
   if [[ -d venv/bin ]]; then
     source venv/bin/activate
     source $HOME/.dropbox
-    ./upload.py -f /Users/User/Documents/Firefox.kdbx
+    ./upload.py -f ${UPLOAD}
     RC=$?
   else
     echo "VirtualEnv missing. Instaling Virtualenv ... "
