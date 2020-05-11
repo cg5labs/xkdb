@@ -11,7 +11,7 @@ import re
 import uuid
 import dropbox
 
-TARGET_FILENAME = str(uuid.uuid4())[:8] + ".kdbx"
+TARGET_FILENAME = str(uuid.uuid4())[:12] 
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-f", "--file", help="file path to upload")
