@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # start custom
-APP_PATH=/Users/User/coding_local/python/xkdb
+APP_PATH=/Users/User/coding_local/xkdb
 CFG_PATH="${HOME}"
 # end custom
 

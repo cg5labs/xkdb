@@ -25,6 +25,7 @@ local_filename = pathlib.Path(args.file)
 # target location in Dropbox
 TARGET = "/"                             # the target folder
 TARGETFILE = TARGET + TARGET_FILENAME    # the target path and file name
+print("Targetfile: %s" % TARGETFILE)
 
 # Create a dropbox object using an API v2 key
 d = dropbox.Dropbox(API_TOKEN)
