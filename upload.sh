@@ -30,7 +30,8 @@ if [[ -d venv/bin ]]; then
   source venv/bin/activate
   else
     echo "VirtualEnv missing. Instaling Virtualenv ... "
-    virtualenv -p /usr/local/bin/python3 venv
+    #virtualenv -p /usr/local/bin/python3 venv
+    python3 -m venv venv
     # shellcheck source=/dev/null
     source venv/bin/activate
     pip3 install -r requirements.txt
