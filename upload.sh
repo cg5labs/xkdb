@@ -1,7 +1,19 @@
 #!/usr/bin/env bash
 
 # start custom
-APP_PATH=/Users/User/coding_local/xkdb
+
+HOST=$(hostname -s)
+
+case ${HOST} in 
+  hp-spectre)
+    APP_PATH="${HOME}/coding/xkdb"
+  ;;
+  *)
+    APP_PATH="${HOME}/coding_local/xkdb"
+  ;;
+esac
+
+APP_PATH="${HOME}/coding/xkdb"
 CFG_PATH="${HOME}"
 # end custom
 
