@@ -4,8 +4,8 @@
 
 HOST=$(hostname -s)
 
-case ${HOST} in 
-  hp-spectre)
+case "${HOST}" in 
+  hp-spectre|macbook)
     APP_PATH="${HOME}/coding/xkdb"
   ;;
   *)
@@ -20,7 +20,7 @@ CFG_PATH="${HOME}"
 UPLOAD=$1
 RC=0
 
-cd ${APP_PATH} || exit 1
+cd "${APP_PATH}" || exit 1
 
 # sanity checks
 
@@ -31,7 +31,7 @@ if [[ -z ${UPLOAD} ]]; then
 fi
 
 # check if local file exists
-if [[ ! -f ${UPLOAD} ]]; then
+if [[ ! -f "${UPLOAD}" ]]; then
   echo "Upload file not found: ${UPLOAD}"
   RC=2
 fi

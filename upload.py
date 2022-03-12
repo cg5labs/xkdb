@@ -45,8 +45,10 @@ d = dropbox.Dropbox(API_TOKEN)
 with local_filename.open("rb") as f:
     # upload gives you metadata about the file
     # we want to overwite any previous version of the file
-    meta_latest  = d.files_upload(f.read(), LATEST_FILE, mode=dropbox.files.WriteMode("overwrite"))
-    meta_archive = d.files_upload(f.read(), ARCHIVE_FILE, mode=dropbox.files.WriteMode("overwrite"))
+    meta_latest  = d.files_upload(f.read(),
+       LATEST_FILE, mode=dropbox.files.WriteMode("overwrite"))
+    meta_archive = d.files_upload(f.read(), ARCHIVE_FILE,
+       mode=dropbox.files.WriteMode("overwrite"))
 
 # create a shared link
 link = d.sharing_create_shared_link(ARCHIVE_FILE)
